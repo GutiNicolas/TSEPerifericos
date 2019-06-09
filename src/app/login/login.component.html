@@ -1,0 +1,37 @@
+<!--
+<div>
+	<h1>Rellene el formulario</h1>
+</div>
+
+<div>
+	<form>
+		<input type="text" #email name="email" placeholder="email">
+		<input type="password" #password name="password" placeholder="password">
+		<input type="button" (click)="login(email.value,password.value)" value="Login">
+	</form>
+</div>
+  --> 
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
+
+<div class="wrapper">
+  <div class="payment">
+    <h2>LOGIN</h2>
+    <div class="form">
+      <div class="space icon-relative">
+        <label class="label">Email:</label>
+        <input class="input" type="text" #email name="email" placeholder="email">
+        <i class="fas fa-user"></i>
+      </div>
+      <div class="space icon-relative">
+        <label class="label">Password:</label>
+        <input class="input" type="password" #password name="password" placeholder="password">
+        <i class="fas fa-lock"></i>
+      </div>
+      <div class="btnn">
+        <input type="button" class="btnnn" (click)="login(email.value,password.value)" value="LOGIN"> 
+      </div>
+      <a href="">Volver al inicio</a>
+    </div>
+  </div>
+</div>

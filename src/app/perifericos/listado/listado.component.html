@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
+
+<div class="wrapper">
+  <div class="payment">
+    <h2>Bienvenido {{nombre}}</h2>
+    <div class="form">
+      <div>
+        <label class="label">Hechos para verificar:</label>
+      </div>
+      <div >
+       <ul style="color: #555555">
+			<li *ngFor="let hechito of hechos">
+				<div class="row">
+				<div class="col">
+				{{hechito.titulo}} </div> <div class="col" style="text-align: right;"> <input class="btn btn-dark" type="button" (click)="verificar(hechito.id)" value="  Verificar  "></div>
+				</div>
+			</li>
+		</ul>
+      </div>
+      <a href="">Volver al inicio</a>
+    </div>
+  </div>
+</div>

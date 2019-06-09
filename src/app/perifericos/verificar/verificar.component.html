@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
+
+<div class="wrapper">
+  <div class="payment">
+    <h2>VERIFICACION</h2>
+    <div class="form">
+      <div >
+        <label class="label">Verificando el hecho: {{idh}} URL:</label>
+      </div>
+      <div >
+        <label class="label">Resultado:</label>
+        <select class="form-control" #tipocont name="tipocont" id="tipocont">
+      <option value="None">Ninguno</option>
+      <option value="VERDADERO">Verdadero</option>
+      <option value="VERD_A_MEDIAS">Verdadero a medias</option>
+      <option value="INFLADO">Inflado</option>  
+      <option value="ENGANOSO">Enganoso</option>  
+      <option value="FALSO">Falso</option>  
+      <option value="RIDICULO">Ridiculo</option>    
+</select>
+      </div>
+      <div class="btnn">
+         <input type="button" class="btnnn" (click)="enviar(tipocont.value)" value="Enviar">
+      </div>
+      <a href="/listado">Volver</a>
+    </div>
+  </div>
+</div>
