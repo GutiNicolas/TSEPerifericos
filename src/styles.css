@@ -1,8 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-	background-image: url("bkg.jpg");
+	background-image: url("bkg.png");
 	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
+}
+
+@media screen and (max-width: 420px){
+	body {
+		background-image: url("bkgmobile.png");
+	}
 }

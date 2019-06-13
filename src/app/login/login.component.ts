@@ -34,8 +34,10 @@ export class LoginComponent implements OnInit {
   			console.log('+++++++++++++++++ TOKEN y MAIL ++++++++++++++++');
   			console.log('+++ TOKEN '+resultado.jwt+' +++');
   			console.log('+++ MAIL '+mail+' +++');
+        console.log('+++ ID '+resultado.idPeriferico+' +++');
   			console.log('++++++++++++++++++++++++++++++++');
   			localStorage.setItem('mailP',mail);
+        localStorage.setItem('idP',resultado.idPeriferico);
   			localStorage.setItem('session',JSON.stringify(new Sesion(resultado,null)));
   			this.router.navigate(['/listado']);
   		}

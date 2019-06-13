@@ -8,7 +8,7 @@
 }
 
 a {
-  color: #2196F3;
+  color: #7227cc;
   font-size: 10px;
   margin-top: 40px;
 }
@@ -92,7 +92,7 @@ body{
 
 .btnn{
   margin-top: 40px;
-  background: #2196F3;
+  background: #7227cc;
   padding: 12px;
   text-align: center;
   color: #f8f8f8;
@@ -107,7 +107,7 @@ body{
   width: 100%;
   height: 100%;
   cursor: pointer;
-  color: #ffffff;
+  color: #ebedff;
   font-size: 18px;
 }
 

@@ -12,7 +12,8 @@ import { Observable } from 'rxjs';
 })
 export class ListadoComponent implements OnInit {
 	//public hechos: Observable<Array<any>>;
-	public hechos: any;//PARA TESTING
+	public hechos: Array<any>;//PARA TESTING
+  public hechox: Array<any>;
 	public nombre: string;
   constructor(private router: Router, private apiservice: ApiServiceService) {
   	
@@ -21,7 +22,7 @@ export class ListadoComponent implements OnInit {
   ngOnInit() {
   	//this.hechos = this.apiservice.getHechosForPeriferico();
   	this.nombre= localStorage.getItem('mailP');
-  	this.hechos =
+  /*	this.hechos =
   	[
   		{
   			titulo: 'hecho uno',
@@ -35,11 +36,18 @@ export class ListadoComponent implements OnInit {
   			titulo: 'hecho tres',
   			id: 3
   		}
-  	]
+  	] */
+   /* this.hechos = */this.apiservice.getHechosForPeriferico().subscribe(res=> {
+     console.log('+++++++++++++++++ HECHOS +++++++++++++++');
+     console.log(res);
+     this.hechos=res
+   });
   }
 
-  verificar(id: string) {
+  verificar(id: string, titulo: string, url: string) {
   	localStorage.setItem('idhecho',id);
+    localStorage.setItem('thecho', titulo);
+    localStorage.setItem('uhecho', url);
   	this.router.navigate(['/verificar']);
   }
 

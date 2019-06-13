@@ -30,15 +30,15 @@ export class ApiServiceService {
   constructor(private http: HttpClient) { }
 
   getHechosForPeriferico(): Observable<Array<object>> {
-    var mail = localStorage.getItem("mailP");
+    var idP = localStorage.getItem("idP");
 
-    return this.http.get<Array<object>>(`${this.API_URL}/getHechosForPeriferico` + mail);
+    return this.http.get<Array<object>>(`${this.API_URL}/periferico/getHechosAsignadosMecanismo/` + idP);
   }
 
   retornarCalificacion(calificacion: string){
     var r: any = {};
     r.idHecho = localStorage.getItem('idhecho');
-    r.idMecanismoVerificacion = localStorage.getItem("mailP");
+    r.idMecanismoVerificacion = localStorage.getItem("idP");
     r.calificacion = calificacion;
     let jsonresp = JSON.stringify(r);
     console.log(jsonresp);
@@ -53,6 +53,7 @@ export class ApiServiceService {
         Authorization: `Bearer ${this.getToken()}`
       }
     });
+    console.log('****&&&&& INTERCEPTED &&&&&&*****');
     return next.handle(request);
   }
 
